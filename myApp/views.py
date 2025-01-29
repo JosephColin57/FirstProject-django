@@ -12,3 +12,7 @@ def bienvenida(request):
 
 def saludo(request):
     return HttpResponse("Hola, ¿cómo estás?")
+
+def saludoConNombre(request, nombre):
+    print("imprimiendo nombre: ", nombre)
+    return HttpResponse(f"Hola, {nombre}. Mucho gusto en saludarte.")
