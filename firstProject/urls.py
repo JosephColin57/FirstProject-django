@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Importar la vista creada
+from myApp.views import bienvenida, saludo
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', bienvenida), # Agregar la vista creada
+    path('saludo/', saludo), # Agregar la vista creada
 ]
