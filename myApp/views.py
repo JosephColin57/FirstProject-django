@@ -16,3 +16,11 @@ def saludo(request):
 def saludoConNombre(request, nombre):
     print("imprimiendo nombre: ", nombre)
     return HttpResponse(f"Hola, {nombre}. Mucho gusto en saludarte.")
+
+def saludoCondicionado(request, type):
+    if type == "mentor":
+        return HttpResponse("Hello mentor here are your classes")
+    elif type == "koder":
+        return HttpResponse("Hello koder welcome to kodemia")
+    else:
+        return HttpResponse("You are not welcome here")
