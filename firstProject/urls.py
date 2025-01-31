@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Incluir las URLs de la aplicación creada
     path('', include('myApp.urls')),
+    path('', include('bootcamp.urls')),
 ]
