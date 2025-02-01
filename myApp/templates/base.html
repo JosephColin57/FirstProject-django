@@ -1,0 +1,23 @@
+<!-- Esto es un comentario en HTML Con crtl+shift+a -->
+
+<!-- DTL Django Templete Language -->
+ <!-- | se usa para filtros como por ejemplo upper para poner en MAYUSCULAS -->
+  <!-- | default para poner un valor por defecto -->
+   <!-- | de length nos ponde la longitud -->
+    <!-- | truncatechars nos trunca el valor donde le indiquemos -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Django</title>
+</head>
+<body>
+    <div>
+        <h1>Bienvenido a Kodemia</h1>
+        <h2>Bienvenido {{name|upper|default:"Sin nombre"}}</h2> <!-- El name viene del context en views -->
+        <h3>Mi apellido {{apellido}} tiene {{apellido|length}} letras</h3>
+        <h4>Mi apellido {{apellido|truncatechars:2}}</h4>
+    </div>
+</body>
+</html>

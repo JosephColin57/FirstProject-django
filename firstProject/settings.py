@@ -56,7 +56,7 @@ ROOT_URLCONF = 'firstProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'bootcamp', 'templates')], # Agregar la ruta de la carpeta templates
+        'DIRS': [os.path.join(BASE_DIR)], # Agregar la ruta de la carpeta templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
