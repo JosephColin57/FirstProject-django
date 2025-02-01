@@ -1,0 +1,47 @@
+{# tambien se puede ingresar comentarios de esta forma #}
+
+<!-- template hijo, hereda de base.html -->
+{% extends "templates/base.html" %}
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koders</title>
+</head>
+<body>
+    <div>
+        {{koders}}
+    </div>
+    <ul>
+        {% for koder in koders %}
+            <li>
+                <p>Nombre :{{koder.name}}</p> 
+                <p>Edad :{{koder.age}}</p> 
+                <p>Email: {{koder.email}}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div>
+        <h2>
+            {% block title %}
+            <h2>Este es el titulo en el hijo list koders</h2>
+            {% endblock title %}
+        </h2>
+    </div>
+ </body>
+ </html>

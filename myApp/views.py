@@ -24,7 +24,7 @@ def saludoConNombre(request, nombre):
         "apellido": "Colin",
     }  # Va a servir para enviar información al template
     template = loader.get_template(
-        "base.html"
+        "templates/base.html"
     )  # o tambien se puede poner la ruta "myApp/base.html" o la ruta de la app
     return HttpResponse(template.render(context, request))
 
