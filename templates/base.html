@@ -37,8 +37,13 @@
     <div>
         <h1> Bienvenidos a base HTML</h1>
         {% block title %}
-        <h2> Este es el titulo</h2>
+        <h2> Este es el titulo desde padre</h2>
         {% endblock title%}
+
+        {% block content %}
+        <p>Este es el contenido padre</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid natus unde voluptatem adipisci vel assumenda fugiat, cupiditate nostrum vero quaerat laboriosam quisquam ea culpa atque obcaecati nam consequuntur repellendus corporis!</p>
+        {% endblock content %}
     </div>
 </body>
 </html>

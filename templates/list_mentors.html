@@ -1,0 +1,35 @@
+{% extends "templates/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        {% block title %}
+            <h1> MENTORS </h1>
+            {% for mentor in mentors%}
+                <div>
+                    <p>Nombre: {{mentor.name}}</p>
+                    <p>Edad: {{mentor.age}}</p>
+                    <p>Email: {{mentor.email}}</p>
+                </div>
+            {% endfor %}
+        {% endblock title %}
+
+        {% block content %}
+            <h1> COURSE </h1>
+            {% for boot in bootcamp %}
+                <div>
+                    <p>Nombre: {{boot.name}}</p>
+                    <p>Language: {{boot.language}}</p>
+                    <p>Duration: {{boot.duration}}</p>
+                </div>
+            {% endfor %}
+        {% endblock content %}
+    </div>
+</body>
+</html>

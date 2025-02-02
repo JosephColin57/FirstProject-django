@@ -39,9 +39,20 @@
     <div>
         <h2>
             {% block title %}
-            <h2>Este es el titulo en el hijo list koders</h2>
+            <h1>Este es el titulo en el hijo </h1>
             {% endblock title %}
         </h2>
+    </div>
+    <div>
+        {% block content%}
+        {% for koder in koders %}
+            <div>
+                <p>Nombre :{{koder.name}}</p> 
+                <p>Edad :{{koder.age}}</p> 
+                <p>Email: {{koder.email}}</p>
+            </div>
+        {% endfor %}
+        {% endblock content %}
     </div>
  </body>
  </html>

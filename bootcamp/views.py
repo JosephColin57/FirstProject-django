@@ -38,3 +38,18 @@ def get_koder(request, id):
 
     print(f"Found Koder -> {koder}")
     return HttpResponse(f"Found Koder -> {koder}")
+
+def list_mentors(request):
+    context = {
+        "bootcamp": [{
+            "name": "Python Bootcamp",
+            "language": "Python",
+            "duration": "3 months"
+        }],
+        "mentors": [
+            {"name": "David", "age": 22, "email": "david@test.com"},
+    ]
+    }
+    template = loader.get_template("templates/list_mentors.html")
+
+    return HttpResponse(template.render(context, request))
