@@ -2,9 +2,15 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
+# Importar el modelo
+from bootcamp.models import Koder
+
 
 # Create your views here.
 def list_koders(request):
+    koders = Koder.objects.all()
+    print(f"Koders -> {koders}")
+
     # creamos contexto 
     context = { 
         "bootcamp" : {
@@ -20,21 +26,23 @@ def list_koders(request):
     }
     #creamos templates
     template = loader.get_template("templates/list_koders.html")
-    return HttpResponse(template.render(context, request))
+    return HttpResponse(koders)
 
 
 def get_koder(request, id):
 
-    koders = [
+    """ koders = [
         {"id": 1, "name": "David", "age": 22, "email": "david@test.com"},
         {"id": 2, "name": "Jorge", "age": 25, "email": "jorge@test.com"},
         {"id": 3, "name": "Rosa", "age": 23, "email": "rosa@test.com"},
-    ]
+    ] """
 
-    koder = [koder for koder in koders if koder["id"] == id]
+    koders = Koder.objects.all()
 
-    if not koder:
-        return HttpResponse("Koder not found")
+    for k in koders:
+        if k.id == id:
+            koder = k
+            break
 
     print(f"Found Koder -> {koder}")
     return HttpResponse(f"Found Koder -> {koder}")

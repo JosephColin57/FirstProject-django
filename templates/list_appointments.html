@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appoinments</title>
+</head>
+<body>
+    <div>
+        {% block Content %}
+        {% for appoinment in appointments %}    
+            <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 300px;">
+                <p>Titulo : {{appoinment.title}}</p> 
+                <p>Fecha : {{appoinment.appointment_date}}</p> 
+                <p>Psicologo : {{appoinment.psychologist.first_name}} {{appoinment.psychologist.last_name}}</p>
+                <p>Paciente : {{appoinment.patient.first_name}} {{appoinment.patient.last_name}}</p>
+            </div>
+        {% endfor %}
+        {% endblock Content %}
+    </div>
+</body>
+</html>

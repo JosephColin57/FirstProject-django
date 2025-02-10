@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psychologist</title>
+</head>
+<body>
+    <div>
+        {% block Content %}  
+            <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 300px;">
+                <p>Nombre : {{psychologist.first_name}}</p> 
+                <p>Apellido : {{psychologist.last_name}}</p> 
+                <p>Email : {{psychologist.email}}</p>
+            </div>
+        {% endblock Content %}
+    </div>
+</body>
+</html>

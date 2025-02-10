@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myApp', # Agregar la aplicación creada
     'bootcamp', # Agregar la aplicación creada
+    'psicomedic',
 ]
 
 MIDDLEWARE = [

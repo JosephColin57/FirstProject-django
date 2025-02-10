@@ -22,4 +22,5 @@ urlpatterns = [
     # Incluir las URLs de la aplicación creada
     path('', include('myApp.urls')),
     path('', include('bootcamp.urls')),
+    path('', include('psicomedic.urls')),
 ]
